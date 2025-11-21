@@ -37,7 +37,7 @@
                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-gray-400">
                         <a href="{{route('sellers.edit', $seller)}}" class="text-blue-600 hover:text-blue-900 mr-3">Editar</a>
                         
-                        <form action="" method="POST" class="inline" onsubmit="return confirm('¿Estás seguro?')">
+                        <form action="{{route('sellers.destroy', $seller)}}" method="POST" class="inline" onsubmit="return confirm('¿Estás seguro?')">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="text-red-600 hover:text-red-900">Eliminar</button>
